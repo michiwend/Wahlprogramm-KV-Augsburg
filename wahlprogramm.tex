@@ -31,25 +31,31 @@
 % Zeilenabstand 1.5
 \usepackage[onehalfspacing]{setspace}
 
-% Neudefinition der Überschriften
-\setkomafont{chapter}{\linespread{1}\huge\color{porange}\PHead}
-\setkomafont{section}{\linespread{1}\LARGE\color{pgrey}\PHead}
-\setkomafont{subsection}{\linespread{1}\Large\color{pgrey}\PHead}
-\setkomafont{subsubsection}{\linespread{1}\large\color{pgrey}\PHead}
-\setkomafont{chapterentry}{\color{pgrey}\PHead}
+% Neudefinition der Schriften
+\setkomafont{chapter}{\linespread{0.9}\huge\color{porange}\PHead}
+\setkomafont{section}{\linespread{0.9}\LARGE\color{pgrey}\PHead}
+\setkomafont{subsection}{\linespread{0.9}\Large\color{pgrey}\PHead}
+\setkomafont{subsubsection}{\linespread{0.9}\large\color{pgrey}\PHead}
+\setkomafont{chapterentry}{\large\color{pgrey}\PHead}
+\setkomafont{pagenumber}{\small\color{porange}}
 
+\usepackage{pdfpages}
 
-
-\title{\PHead \color{pgrey} Kommunalwahlprogramm\\     
-       Piratenpartei\\Kreisverband Augsburg}
 
 \begin{document}
 
-  \maketitle
+  \includepdf[fitpaper]{deckblatt.pdf}
   
   \tableofcontents
   
   \include{chapter/kultur}
+  \include{chapter/bildung}
+  \include{chapter/buergerbeteiligung_buergerrechte}
+  \include{chapter/datenschutz_und_transparenz}
   \include{chapter/freie_netze}
+  \include{chapter/infrastruktur}
+  \include{chapter/stadtentwicklung}
+  \include{chapter/wirtschaft_und_soziales}
+  
 
 \end{document}
