@@ -10,11 +10,10 @@
 \usepackage[a5paper]{geometry}
 \usepackage[ngerman]{babel}
 
+% Diese Pakete lassen sich nur mit XeLaTex oder LuaLaTex verwenden
 \usepackage{fontspec}
 \usepackage{xunicode}
-\defaultfontfeatures{Mapping=tex-text}
-\defaultfontfeatures{Ligatures=TeX}
-
+\defaultfontfeatures{Mapping=tex-text} % To support LaTeX quoting style
 
 % Generiert ein PDF-Inhaltsverzeichnis und klickbare Links
 \usepackage[hidelinks]{hyperref}
@@ -25,7 +24,7 @@
 \definecolor{pgrey}{HTML}{272828}
 \definecolor{porange}{HTML}{FF8800}
 
-% Piraten-Schriftarten
+% Piraten-Schriftarten (Müssen als Systemfonts vorhanden sein)
 \newfontfamily\PHead{Politics Head}
 \setmainfont{DejaWeb}
 
@@ -33,7 +32,7 @@
 \usepackage[onehalfspacing]{setspace}
 
 % Neudefinition der Schriften
-\setkomafont{chapter}{\linespread{0.9}\huge\color{porange}\PHead}
+\setkomafont{chapter}{\linespread{0.9}\Huge\color{porange}\PHead}
 \setkomafont{section}{\linespread{0.9}\LARGE\color{pgrey}\PHead}
 \setkomafont{subsection}{\linespread{0.9}\Large\color{pgrey}\PHead}
 \setkomafont{subsubsection}{\linespread{0.9}\large\color{pgrey}\PHead}
@@ -63,5 +62,4 @@
   \include{chapter/stadtentwicklung}
   \include{chapter/wirtschaft_und_soziales}
   
-
 \end{document}
